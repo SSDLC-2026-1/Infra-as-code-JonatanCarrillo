@@ -106,19 +106,20 @@ Format your configuration to rewrite it to follow HCL style:
 ```bash
 terraform fmt
 ```
-
+![alt text](image-8.png)
 Validate the syntax:
 ```bash
 terraform validate
 ```
-
+![alt text](image-9.png)
 ### 5. Review the Plan
 
 Generate and review the execution plan:
 ```bash
 terraform plan
 ```
-
+![alt text](image-10.png)
+![alt text](image-11.png)
 The plan output will show that Terraform intends to create a new EC2 instance with:
 - A dynamically selected Amazon Linux 2 AMI
 - Instance type `t3.micro` (Free Tier eligible in many accounts/regions)
@@ -130,7 +131,8 @@ Apply the configuration to create the EC2 instance:
 ```bash
 terraform apply
 ```
-
+![alt text](image-12.png)
+![alt text](image-13.png)
 Review the proposed changes and type `yes` when prompted to confirm.
 
 ### 7. Verify the Resource
@@ -165,6 +167,8 @@ Generate and review the execution plan:
 ```bash
 terraform plan
 ```
+![alt text](image-14.png)
+![alt text](image-15.png)
 
 Since tags on an EC2 instance can be changed, the plan output will show that Terraform will make an update in-place:
 - the tags on `aws_instance.main` will be updated
@@ -188,7 +192,7 @@ Apply the configuration to update the EC2 instance tags:
 ```bash
 terraform apply
 ```
-
+![alt text](image-16.png)
 Review the proposed changes and type `yes` when prompted to confirm.
 
 ### 11. Update the Tags on the EC2 Instance
@@ -216,6 +220,7 @@ Generate and review the execution plan:
 ```bash
 terraform plan
 ```
+![alt text](image-17.png)
 
 Since the tags of an EC2 instance can be changed, the plan output will show that Terraform will make an update in-place:
 - the tags on `aws_instance.main` will be updated
@@ -240,7 +245,8 @@ Apply the configuration to apply the latest EC2 tag updates:
 ```bash
 terraform apply
 ```
-
+![alt text](image-18.png)
+![alt text](image-19.png)
 Review the proposed changes and type `yes` when prompted to confirm.
 
 ## Verification Steps
