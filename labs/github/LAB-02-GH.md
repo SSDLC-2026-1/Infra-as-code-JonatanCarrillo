@@ -111,19 +111,22 @@ Format your configuration to rewrite it to follow HCL style:
 ```bash
 terraform fmt
 ```
-
+![alt text](image-11.png)
 Validate the syntax:
 ```bash
 terraform validate
 ```
-
+![alt text](image-12.png)
 ### 5. Review the Plan
 
 Generate and review the execution plan:
 ```bash
 terraform plan
 ```
-
+![alt text](image-13.png)
+![alt text](image-14.png)
+![alt text](image-15.png)
+![alt text](image-16.png)
 The plan output will show that Terraform intends to create:
 - A new private repository with specified features
 - A branch protection rule requiring one review for the main branch
@@ -134,7 +137,7 @@ Apply the configuration to create the resources:
 ```bash
 terraform apply
 ```
-
+![alt text](image-17.png)
 Review the proposed changes and type `yes` when prompted to confirm.
 
 ### 7. Verify the Resources
@@ -182,6 +185,7 @@ Generate and review the execution plan:
 ```bash
 terraform plan
 ```
+![alt text](image-22.png)
 
 The plan output will show that Terraform will update the repository in-place:
 - The description will be updated
@@ -194,6 +198,7 @@ Apply the configuration to update the repository:
 ```bash
 terraform apply
 ```
+![alt text](image-18.png)
 
 Review the proposed changes and type `yes` when prompted to confirm.
 
@@ -211,6 +216,7 @@ resource "github_branch_protection" "main" {
   }
 }
 ```
+![alt text](image-19.png)
 
 ### 12. Run a Terraform Plan to Perform a Dry Run
 
@@ -218,6 +224,7 @@ Generate and review the execution plan:
 ```bash
 terraform plan
 ```
+![alt text](image-20.png)
 
 The plan output will show that Terraform will update the branch protection rule:
 - Required reviewers will be increased to `2`
@@ -228,6 +235,7 @@ Apply the configuration to update the branch protection:
 ```bash
 terraform apply
 ```
+![alt text](image-21.png)
 
 Review the proposed changes and type `yes` when prompted to confirm.
 
