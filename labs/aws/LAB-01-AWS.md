@@ -45,6 +45,8 @@ Create the initial configuration files in this directory:
 ```bash
 touch main.tf variables.tf providers.tf
 ```
+
+![alt text](image.png)
 You can also just create these in VSCode by right-clicking the directory.
 
 Your directory structure should look like this:
@@ -87,6 +89,7 @@ Run the following command to ensure consistent formatting:
 ```bash
 terraform fmt
 ```
+![alt text](image-1.png)
 
 Expected output: If any files were formatted, their names will be listed. If no formatting was needed, there will be no output.
 
@@ -96,6 +99,7 @@ Expected output: If any files were formatted, their names will be listed. If no 
  ```bash
  terraform init
  ```
+![alt text](image-2.png)
 
 Expected output:
 ```bash
@@ -119,6 +123,7 @@ Run the validation command to check for syntax errors:
 ```bash
 terraform validate
 ```
+![alt text](image-3.png)
 
 Expected output:
 ```
@@ -134,12 +139,14 @@ Let's experiment with version constraints:
 ```hcl
 required_version = ">= 99.0.0"  # An intentionally high version
 ```
+![alt text](image-4.png)
 
 2. Run the terraform initialization command:
 
 ```bash
 terraform init
 ```
+![alt text](image-5.png)
 
 You should see an error message similar to:
 ```
@@ -156,12 +163,13 @@ Initializing the backend...
 ```hcl
 required_version = ">= 1.10.x"  # Replace with your actual version
 ```
-
+![alt text](image-6.png)
 4. Run terraform init again:
 
 ```bash
 terraform init
 ```
+![alt text](image-7.png)
 
 Expected output: You should now see success messages indicating proper initialization.
 
